@@ -71,11 +71,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#horario" class="md-skip">
-          Saltar a contenido
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -467,8 +462,6 @@
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
-      
-        
       
       
       <a href="." class="md-nav__link md-nav__link--active">
@@ -1929,69 +1922,212 @@
                   
 
 
-<h1 id="horario">Horario<a class="headerlink" href="#horario" title="Permanent link">&para;</a></h1>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">LUNES</th>
-<th style="text-align: center;">MARTES</th>
-<th style="text-align: center;">MIÉRCOLES</th>
-<th style="text-align: center;">JUEVES</th>
-<th style="text-align: center;">VIERNES</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">Mates</td>
-<td style="text-align: center;">Mates</td>
-<td style="text-align: center;">Historia</td>
-<td style="text-align: center;">Tecnología</td>
-<td style="text-align: center;">Tecnología</td>
-</tr>
-<tr>
-<td style="text-align: center;">Historia</td>
-<td style="text-align: center;">Tecnología</td>
-<td style="text-align: center;">Mates</td>
-<td style="text-align: center;">Mates</td>
-<td style="text-align: center;">Física</td>
-</tr>
-<tr>
-<td style="text-align: center;">TEC</td>
-<td style="text-align: center;">Religión</td>
-<td style="text-align: center;">Programación</td>
-<td style="text-align: center;">Francés</td>
-<td style="text-align: center;">Francés</td>
-</tr>
-<tr>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr>
-<td style="text-align: center;">Física</td>
-<td style="text-align: center;">Filosofía</td>
-<td style="text-align: center;">Física</td>
-<td style="text-align: center;">TIC</td>
-<td style="text-align: center;">Lengua</td>
-</tr>
-<tr>
-<td style="text-align: center;">Programación</td>
-<td style="text-align: center;">TIC</td>
-<td style="text-align: center;">Lengua</td>
-<td style="text-align: center;">Física</td>
-<td style="text-align: center;">Filosofía</td>
-</tr>
-<tr>
-<td style="text-align: center;">Francés</td>
-<td style="text-align: center;">Lengua</td>
-<td style="text-align: center;">Filosofía</td>
-<td style="text-align: center;">Historia</td>
-<td style="text-align: center;">Historia</td>
-</tr>
-</tbody>
-</table>
+  <h1>🕒 Horario</h1>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horario 3D Interactivo</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+        .centered-table {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            perspective: 1500px;
+        }
+
+        table {
+            border-collapse: separate;
+            border-spacing: 5px;
+            background: linear-gradient(145deg, #ffffff, #f0f8ff);
+            border-radius: 15px;
+            overflow: hidden;
+            transform-style: preserve-3d;
+            transition: transform 0.1s ease;
+            width: 90%;
+            max-width: 1200px;
+            font-size: 1.2em;
+        }
+
+        th, td {
+            border: none;
+            padding: 25px;
+            text-align: center;
+            vertical-align: middle;
+            font-family: 'Poppins', sans-serif;
+            color: #34495e;
+            transition: all 0.3s ease;
+        }
+
+        th {
+            background-color: #2980b9;
+            font-weight: 700;
+            color: #FFF;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 1.4em;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 0 15px rgba(41, 128, 185, 0.9), 0 0 30px rgba(41, 128, 185, 0.6);
+            transition: 0.3s;
+        }
+
+        th:hover {
+            box-shadow: 0 0 20px rgba(41, 128, 185, 1), 0 0 40px rgba(41, 128, 185, 0.8);
+        }
+
+        td {
+            background-color: rgba(255, 255, 255, 0.6);
+            font-weight: 300;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        tr:nth-child(even) td {
+            background-color: rgba(230, 230, 250, 0.5);
+        }
+
+        tr:nth-child(4) td {
+            border-radius: 10px;
+            background: linear-gradient(45deg, #ff6b6b, #ff4b4b);
+            color: white;
+            font-size: 1.4em;
+            text-transform: uppercase;
+            box-shadow: 0 0 15px rgba(231, 76, 60, 0.9);
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            transition: 0.3s;
+        }
+
+        tr:nth-child(4) td:hover {
+            box-shadow: 0 0 20px rgba(231, 76, 60, 1);
+
+        }
+
+        td:hover {
+            transform: translateZ(20px);
+            background-color: rgba(41, 128, 185, 0.3);
+            font-weight: 400;
+
+        }
+
+        .cell-content {
+            transition: transform 0.3s ease;
+        }
+
+        tr:nth-child(4) td {
+            font-weight: bold;
+            text-align: center; /* Alinea horizontalmente */
+            vertical-align: middle; /* Alinea verticalmente */
+        }
+
+        /* Forzar centrado para celdas con colspan */
+        td[colspan] {
+            text-align: center !important; /* Forzar centrado horizontal */
+            vertical-align: middle !important; /* Forzar centrado vertical */
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="centered-table">
+        <table id="horario">
+            <thead>
+                <tr>
+                    <th>LUNES</th>
+                    <th>MARTES</th>
+                    <th>MIÉRCOLES</th>
+                    <th>JUEVES</th>
+                    <th>VIERNES</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Mates</td>
+                    <td>Mates</td>
+                    <td>Historia</td>
+                    <td>Tecnología</td>
+                    <td>Tecnología</td>
+                </tr>
+                <tr>
+                    <td>Historia</td>
+                    <td>Tecnología</td>
+                    <td>Mates</td>
+                    <td>Mates</td>
+                    <td>Física</td>
+                </tr>
+                <tr>
+                    <td>TEC</td>
+                    <td>Religión</td>
+                    <td>Programación</td>
+                    <td>Francés</td>
+                    <td>Francés</td>
+                </tr>
+                <tr>
+                    <td colspan="5">RECREO</td>
+                </tr>
+                <tr>
+                    <td>Física</td>
+                    <td>Filosofía</td>
+                    <td>Física</td>
+                    <td>TIC</td>
+                    <td>Lengua</td>
+                </tr>
+                <tr>
+                    <td>Programación</td>
+                    <td>TIC</td>
+                    <td>Lengua</td>
+                    <td>Física</td>
+                    <td>Filosofía</td>
+                </tr>
+                <tr>
+                    <td>Francés</td>
+                    <td>Lengua</td>
+                    <td>Filosofía</td>
+                    <td>Historia</td>
+                    <td>Historia</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+    if (window.innerWidth > 900) {
+        const table = document.getElementById('horario');
+        const cells = table.getElementsByTagName('td');
+
+        // Envolver el contenido de cada celda en un span
+        for (let cell of cells) {
+            cell.innerHTML = `<span class="cell-content">${cell.innerHTML}</span>`;
+        }
+
+        document.addEventListener('mousemove', (e) => {
+            const rect = table.getBoundingClientRect();
+            const centerX = rect.left + rect.width / 2;
+            const centerY = rect.top + rect.height / 2;
+
+            const mouseX = e.clientX;
+            const mouseY = e.clientY;
+
+            const angleY = (mouseX - centerX) / 20;
+            const angleX = (centerY - mouseY) / 20;
+
+            table.style.transform = `rotateY(${angleY}deg) rotateX(${angleX}deg)`;
+
+            // Rotar el contenido de cada celda en la dirección opuesta
+            for (let cell of cells) {
+                const content = cell.querySelector('.cell-content');
+                content.style.transform = `rotateY(${-angleY}deg) rotateX(${-angleX}deg)`;
+            }
+        });
+    }
+    </script>
+</body>
+</html>
 
 
 
@@ -2012,7 +2148,7 @@
     <span class="md-icon" title="Última actualización">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">5 de octubre de 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">8 de octubre de 2024</span>
   </span>
 
     
