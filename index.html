@@ -1110,7 +1110,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Física/Gravitación y Campo Gravitatorio/Fórmulas.md" class="md-nav__link">
+      <a href="F%C3%ADsica/Gravitaci%C3%B3n%20y%20Campo%20Gravitatorio/F%C3%B3rmulas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1131,7 +1131,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Física/Gravitación y Campo Gravitatorio/Demostraciones.md" class="md-nav__link">
+      <a href="F%C3%ADsica/Gravitaci%C3%B3n%20y%20Campo%20Gravitatorio/Demostraciones/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1152,7 +1152,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Física/Gravitación y Campo Gravitatorio/Ejercicios.md" class="md-nav__link">
+      <a href="F%C3%ADsica/Gravitaci%C3%B3n%20y%20Campo%20Gravitatorio/Ejercicios/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2038,94 +2038,63 @@
         <table id="horario">
             <thead>
                 <tr>
-                    <th>LUNES</th>
-                    <th>MARTES</th>
-                    <th>MIÉRCOLES</th>
-                    <th>JUEVES</th>
-                    <th>VIERNES</th>
+                    <th style="text-align: center;">LUNES</th>
+                    <th style="text-align: center;">MARTES</th>
+                    <th style="text-align: center;">MIÉRCOLES</th>
+                    <th style="text-align: center;">JUEVES</th>
+                    <th style="text-align: center;">VIERNES</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Mates</td>
-                    <td>Mates</td>
-                    <td>Historia</td>
-                    <td>Tecnología</td>
-                    <td>Tecnología</td>
+                    <td style="text-align: center;">Mates</td>
+                    <td style="text-align: center;">Mates</td>
+                    <td style="text-align: center;">Historia</td>
+                    <td style="text-align: center;">Tecnología</td>
+                    <td style="text-align: center;">Tecnología</td>
                 </tr>
                 <tr>
-                    <td>Historia</td>
-                    <td>Tecnología</td>
-                    <td>Mates</td>
-                    <td>Mates</td>
-                    <td>Física</td>
+                    <td style="text-align: center;">Historia</td>
+                    <td style="text-align: center;">Tecnología</td>
+                    <td style="text-align: center;">Mates</td>
+                    <td style="text-align: center;">Mates</td>
+                    <td style="text-align: center;">Física</td>
                 </tr>
                 <tr>
-                    <td>TEC</td>
-                    <td>Religión</td>
-                    <td>Programación</td>
-                    <td>Francés</td>
-                    <td>Francés</td>
+                    <td style="text-align: center;">TEC</td>
+                    <td style="text-align: center;">Religión</td>
+                    <td style="text-align: center;">Programación</td>
+                    <td style="text-align: center;">Francés</td>
+                    <td style="text-align: center;">Francés</td>
                 </tr>
                 <tr>
                     <td colspan="5">RECREO</td>
                 </tr>
                 <tr>
-                    <td>Física</td>
-                    <td>Filosofía</td>
-                    <td>Física</td>
-                    <td>TIC</td>
-                    <td>Lengua</td>
+                    <td style="text-align: center;">Física</td>
+                    <td style="text-align: center;">Filosofía</td>
+                    <td style="text-align: center;">Física</td>
+                    <td style="text-align: center;">TIC</td>
+                    <td style="text-align: center;">Lengua</td>
                 </tr>
                 <tr>
-                    <td>Programación</td>
-                    <td>TIC</td>
-                    <td>Lengua</td>
-                    <td>Física</td>
-                    <td>Filosofía</td>
+                    <td style="text-align: center;">Programación</td>
+                    <td style="text-align: center;">TIC</td>
+                    <td style="text-align: center;">Lengua</td>
+                    <td style="text-align: center;">Física</td>
+                    <td style="text-align: center;">Filosofía</td>
                 </tr>
                 <tr>
-                    <td>Francés</td>
-                    <td>Lengua</td>
-                    <td>Filosofía</td>
-                    <td>Historia</td>
-                    <td>Historia</td>
+                    <td style="text-align: center;">Francés</td>
+                    <td style="text-align: center;">Lengua</td>
+                    <td style="text-align: center;">Filosofía</td>
+                    <td style="text-align: center;">Historia</td>
+                    <td style="text-align: center;">Historia</td>
                 </tr>
             </tbody>
         </table>
     </div>
 
-    <script>
-    if (window.innerWidth > 900) {
-        const table = document.getElementById('horario');
-        const cells = table.getElementsByTagName('td');
-
-        // Envolver el contenido de cada celda en un span
-        for (let cell of cells) {
-            cell.innerHTML = `<span class="cell-content">${cell.innerHTML}</span>`;
-        }
-
-        document.addEventListener('mousemove', (e) => {
-            const rect = table.getBoundingClientRect();
-            const centerX = rect.left + rect.width / 2;
-            const centerY = rect.top + rect.height / 2;
-
-            const mouseX = e.clientX;
-            const mouseY = e.clientY;
-
-            const angleY = (mouseX - centerX) / 20;
-            const angleX = (centerY - mouseY) / 20;
-
-            table.style.transform = `rotateY(${angleY}deg) rotateX(${angleX}deg)`;
-
-            // Rotar el contenido de cada celda en la dirección opuesta
-            for (let cell of cells) {
-                const content = cell.querySelector('.cell-content');
-                content.style.transform = `rotateY(${-angleY}deg) rotateX(${-angleX}deg)`;
-            }
-        });
-    }
-    </script>
 </body>
 </html>
 
@@ -2148,7 +2117,7 @@
     <span class="md-icon" title="Última actualización">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">8 de octubre de 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">9 de octubre de 2024</span>
   </span>
 
     
